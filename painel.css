@@ -1,0 +1,127 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+
+
+/*Navbar*/
+
+.logo-container {
+    margin-top: auto; /* Empurra a logo para a parte inferior da sidebar */
+    padding: 10px; /* Adiciona um pouco de espaço em torno da imagem */
+    text-align: center; /* Centraliza a imagem */
+}
+
+.logo-container img {
+    max-width: 30%; /* Garante que a imagem não exceda a largura do contêiner */
+    width: 100px; /* Mantém a proporção da imagem */
+}
+
+
+/* CSS existente */
+.sidebar {
+    display: flex;
+    flex-direction: column; /* Permite que os filhos sejam empilhados verticalmente */
+    justify-content: space-between; /* Distribui o espaço entre os elementos, empurrando o rodapé para baixo */
+    width: 250px; /* Largura quando expandida */
+    background-color: #343a40;
+    color: white;
+    transition: width 0.3s;
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+}
+
+.sidebar.collapsed {
+    width: 60px; /* Largura quando contraída */
+}
+
+.sidebar h2 {
+    text-align: center; /* Centraliza o título do painel */
+}
+
+.nav {
+    padding: 0; /* Remove o padding padrão */
+}
+
+.nav-link {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px; /* Ajuste conforme necessário */
+}
+
+.nav-link i {
+    font-size: 20px; /* Ajuste o tamanho do ícone conforme necessário */
+}
+
+.sidebar.collapsed .nav-text {
+    display: none; /* Esconde o texto do item de navegação quando colapsada */
+}
+
+.sidebar.collapsed .nav-link {
+    justify-content: center; /* Garante que os ícones estejam centralizados */
+}
+
+
+.nav-text {
+    margin-left: 10px; /* Espaço entre ícone e texto */
+}
+
+/* Ocultar texto do título quando a sidebar está colapsada */
+.sidebar.collapsed .sidebar-title {
+    display: none; /* Esconde o texto do título */
+}
+
+
+/* Ocultar texto quando a sidebar está colapsada */
+.sidebar.collapsed .nav-text {
+    display: none; /* Esconde o texto */
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    transition: margin-left 0.3s;
+    flex-grow: 1;
+}
+
+.content.collapsed {
+    margin-left: 60px; /* Margem quando a barra lateral está contraída */
+}
+
+#toggleBtn {
+    cursor: pointer;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+/*Cards*/
+
+.card-painel {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o conteúdo ao centro */
+    justify-content: center; /* Alinha horizontalmente o conteúdo ao centro */
+    background-color: rgb(43, 180, 54); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border-radius: 15px; /* Bordas arredondadas */
+    min-width: 80%; /* Largura mínima */
+    max-width: 100%; /* Ajustado para ocupar até 100% da largura disponível */
+    min-height: 150px; /* Altura mínima */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    margin: 0 auto; /* Centraliza o card horizontalmente na página */
+    padding: 20px; /* Adiciona espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destaque */
+    transition: 0.5s;
+}
+
+.card-painel:hover {
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+}
+

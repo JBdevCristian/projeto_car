@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantir que o corpo ocupe pelo menos a altura da janela */
+}
+
+.logo-container img {
+    width: 120px;
+}
+
+/* Estilo da seção hero */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Necessário para posicionar o pseudo-elemento */
+    background-image: url(public/IMG/head.jpg);
+    background-repeat: no-repeat; /* Garante que a imagem não se repita */
+    background-size: cover; /* Faz a imagem cobrir todo o elemento */
+    background-position: center; /* Centraliza a imagem no elemento */
+    height: 70vh; /* Altura do elemento */
+    overflow: hidden; /* Para esconder o pseudo-elemento que ultrapassa os limites */
+}
+
+#hero::before {
+    content: ""; /* Necessário para o pseudo-elemento aparecer */
+    position: absolute; /* Posiciona em relação ao #hero */
+    top: 0; /* Começa no topo */
+    left: 0; /* Começa à esquerda */
+    right: 0; /* Extende até a direita */
+    bottom: 0; /* Extende até a parte inferior */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
+    z-index: 1; /* Coloca a sobreposição acima da imagem de fundo */
+}
+
+#hero h1, #hero p, #hero a { /* Adicione aqui qualquer outro seletor de conteúdo que você tenha */
+    position: relative; /* Necessário para que o texto fique acima da sobreposição */
+    z-index: 2; /* Coloca o texto acima da sobreposição */
+    color: white; /* Cor do texto */
+}
+
+
+
+
+/* Estilo da seção de recursos */
+#features {
+    background-color: #f9f9f9;
+}
+
+/* Estilo da seção sobre */
+#about {
+    background-color: #333;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #0050ff;
+    margin-top: auto; /* Empurra o rodapé para a parte inferior */
+}
+
+footer p {
+    margin-top: auto;
+    
+}
