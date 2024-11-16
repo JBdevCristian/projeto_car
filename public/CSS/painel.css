@@ -87,7 +87,6 @@ h2 {
 }
 
 /*Cards*/
-
 .card-painel {
     display: flex;
     align-items: center; /* Alinha verticalmente o conteúdo ao centro */
@@ -108,4 +107,5 @@ h2 {
 .card-painel:hover {
     transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
 }
+
 

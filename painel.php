@@ -15,12 +15,9 @@
     <title>Painel de Controle - CheckCar</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Adicionando Font Awesome -->
-    <link rel="stylesheet" href="public/CSS/painel.css">
+    <link rel="stylesheet" href="./public/CSS/painel.css">
 </head>
 <body>
-
-    
-    
     <? include("./public/views/sidebar.php"); ?>
 
     <div class="content collapsed d-flex justify-content-center" id="content"> <!-- Centraliza todo o conteúdo -->
@@ -37,7 +34,7 @@
     
             <div class="col-md-6 mb-4 d-flex justify-content-center"> <!-- Use mb-4 para espaço entre as colunas -->
                     <div class="card-painel">
-                        <h1>teste</h1>
+                        <h3>Quanto cobrar pelo seu serviço?</h3>
                     </div>
             </div>
     
