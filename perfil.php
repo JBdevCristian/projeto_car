@@ -34,13 +34,14 @@
                 <label class="ml-auto">Entrou em 2024</label>
             </div>
             <div class="profile-image">
-                    <img src="https://via.placeholder.com/150" alt="Foto de Perfil">
-                </div>
-            <div class="card-body text-center d-flex">
+                <img src="https://via.placeholder.com/150" alt="Foto de Perfil">
+            </div>
+            <div class="card-body d-flex">
                 <h3 class="card-title">Cristian Adagoberto Enes Vianna da Silva</h3>
                 <a href="#" class="card-link ml-auto">Alterar nome</a>
             </div>
         </div>
+
 
         <!-- Informações da conta -->
             <div id="info-conta" class="mb-4">
@@ -62,39 +63,45 @@
             <div id="emails" class="mb-4">
                 <div class="d-flex">
                     <h3>E-mails</h3>
-                    <button class="btn btn-primary mb-3">Adicionar +</button>
+                    <button class="ml-auto">+ Adicionar</button>
                 </div>
                 <div class="email card-perfil mb-2">
                     <i>(logo email)</i>
                     <label for="">Principal</label>
-                    <p>jbcristian78@gmail.com</p>
-                    <a href="#">editar</a>
+                    <div class="d-flex">
+                        <p>jbcristian78@gmail.com</p>
+                        <a href="#" class="ml-auto">editar</a>
+                    </div>
                 </div>
             </div>
 
             <div id="telefones" class="mb-4">
                 <div class="d-flex">
                     <h3>Numeros de telefone</h3>
-                    <button class="btn btn-primary mb-3">Adicionar +</button>
+                    <button class="ml-auto">+ Adicionar</button>
                 </div>
                 <div class="telefone card-perfil mb-2">
                     <i>(logo telefone)</i>
                     <label for="">Principal</label>
-                    <p>(11) 94112-5900</p>
-                    <a href="#">editar</a>
+                    <div class="d-flex">
+                        <p>(11) 94112-5900</p>
+                        <a href="#" class="ml-auto">editar</a>
+                    </div>
                 </div>
             </div>
 
             <div id="enderecos" class="mb-4">
                 <div class="d-flex">
                     <h3>Endereços</h3>
-                    <button class="btn btn-primary mb-3">Adicionar +</button>
+                    <button class="ml-auto">+ Adicionar</button>
                 </div>
                 <div class="endereco card-perfil mb-2">
                     <i>(logo casa)</i>
                     <label for="">Principal</label>
-                    <p>Rua maria rosa fernandes, Parque Taboão, Taboão da serra SP 06764450</p>
-                    <a href="#">editar</a>
+                    <div class="d-flex">
+                        <p>Rua maria rosa fernandes, Parque Taboão, Taboão da serra SP 06764450</p>
+                        <a href="#" class="ml-auto">editar</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -107,12 +114,30 @@
     
     
 <style>
+    h3 {
+        font-size: larger;
+        align-items: center;
+    }
+
+    button {
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        background-color: white;
+        font-size: medium;
+        padding: 2px 20px 2px 20px;
+        margin-bottom: 20px;
+    }
+
+    button:hover{
+        background-color: #c7c7c7;
+    }
     /* Pefil */
     .card-perfil-info {
         background-color: white;
         border-radius: 10px;
         border: 1px solid #c7c7c7;
-        position: relative;
+        position: relative; /* Necessário para criar o contexto para a imagem */
+        overflow: hidden; /* Para garantir que a imagem não ultrapasse as bordas arredondadas */
     }
 
     .card-perfil-info h3 {
@@ -123,34 +148,43 @@
     .card-perfil-info .fundo {
         background-color: #0080ff;
         border-radius: 10px 10px 0px 0px;
+        font-size: smaller;
         width: 100%;
         height: 150px;
-        position: relative; /* Necessário para criar o contexto para a imagem */
-        z-index: 1; /* Define a camada inferior */
+        position: relative; /* Contexto de empilhamento */
+        z-index: 1; /* Fundo fica abaixo da imagem */
         color: white;
         display: flex;
         padding: 20px;
     }
 
-    .profile-info {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        position: relative; /* Mantém o contexto flex */
+    .profile-image {
+        position: absolute; /* Posiciona a imagem dentro do contêiner */
+        top: 50%; /* Centraliza verticalmente */
+        left: 10%; /* Centraliza horizontalmente */
+        transform: translate(-50%, -50%); /* Ajuste fino para centralização exata */
+        z-index: 2; /* Coloca a imagem acima do fundo */
+    }
+
+    /* Media query para telas menores */
+    @media (max-width: 768px) {
+        .profile-image {
+            left: 18%; /* Ajuste o valor de "left" para 18% em telas menores */
+        }
     }
 
     .profile-image img {
         border-radius: 50%;
-        width: 100px;
-        height: 100px;
+        width: 100px; /* Tamanho da imagem */
+        height: 100px; /* Tamanho da imagem */
         object-fit: cover;
-        position: absolute; /* A imagem será posicionada dentro da div pai */
-        top: 50%; /* Centraliza verticalmente em relação ao pai */
-        left: 50%; /* Centraliza horizontalmente em relação ao pai */
-        transform: translate(-300%, -55%); /* Ajuste fino para centralizar exato */
-        z-index: 2; /* A imagem ficará acima da div .fundo */
     }
+
+    .card-link {
+        margin-top: 10px;
+    }
+
+    
     /* Informações da conta*/
     .card-perfil-user {
         background-color: white;
@@ -189,6 +223,17 @@
         padding: 30px;
         border-radius: 10px;
         border: 1px solid #c7c7c7;
+    }
+
+    .card-perfil label{
+        background-color: #ccc;
+        padding: 2px 10px 2px 10px;
+        border-radius: 10px;
+        font-size: smaller;
+    }
+
+    .card-perfil p {
+        font-weight: 500;
     }
 
    
