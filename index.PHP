@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>CheckCar - Seu Diagnóstico Automotivo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/css/estilo.css">
+    <link rel="stylesheet" href="./public/css/estilo.css">
 </head>
 <body>
     <?php include("public/views/navbar.php"); ?>

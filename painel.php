@@ -20,44 +20,45 @@
 <body>
     <? include("./public/views/sidebar.php"); ?>
 
-    <div class="content collapsed d-flex justify-content-center" id="content"> <!-- Centraliza todo o conteúdo -->
-        <div id="info" class="row text-center"> <!-- Adicionando texto centralizado -->
+    <div class="content collapsed d-flex justify-content-center" id="content">
+    <div id="info" class="row text-center">
     
-        <div class="col-md-12 mb-4">
+        <div class="col-12 mb-4">
             <h2 id="profile">Qual o modelo do veículo?</h2>
             <form id="searchForm" class="d-flex justify-content-center mt-5">
-                <input type="text" id="veiculoInput" placeholder="Digite modelo" class="form-control me-2" style="width: 600px;">
+                <input type="text" id="veiculoInput" placeholder="Digite modelo" class="form-control me-2" style="max-width: 600px; width: 100%;">
                 <button type="submit" class="btn btn-success">Pesquisar</button>
             </form>
-            <div id="resultados" class="mt-4"></div> <!-- Div para exibir os resultados -->
+            <div id="resultados" class="mt-4"></div>
         </div>
     
-            <div class="col-md-6 mb-4 d-flex justify-content-center"> <!-- Use mb-4 para espaço entre as colunas -->
-                    <div class="card-painel">
-                        <h3>Quanto cobrar pelo seu serviço?</h3>
-                    </div>
+        <div class="col-12 col-md-6 mb-4 d-flex justify-content-center">
+            <div class="card-painel">
+                <h3><i class="fa-solid fa-dollar-sign mx-3"></i>Quanto cobrar pelo seu serviço?</h3>
             </div>
+        </div>
     
-            <div class="col-md-6 mb-4 d-flex justify-content-center"> <!-- Use mb-4 para espaço entre as colunas -->
-                    <div class="card-painel">
-                        <h1>teste</h1>
-                    </div>
+        <div class="col-12 col-md-6 mb-4 d-flex justify-content-center">
+            <div class="card-painel">
+                <h3><i class="fa-solid fa-square-poll-vertical mx-3"></i>Movimentações</h3>
             </div>
+        </div>
     
-            <div class="col-md-6 mb-4 d-flex justify-content-center"> <!-- Use mb-4 para espaço entre as colunas -->
-                <div class="card-painel">
-                    <h1>teste</h1>
-                </div>
+        <div class="col-12 col-md-6 mb-4 d-flex justify-content-center">
+            <div class="card-painel">
+                <h3><i class="fa-solid fa-magnifying-glass mx-3"></i>Localize o problema</h3>
             </div>
+        </div>
 
-            <div class="col-md-6 mb-4 d-flex justify-content-center"> <!-- Use mb-4 para espaço entre as colunas -->
-                <div class="card-painel">
-                    <h1>teste</h1>
-                </div>
+        <div class="col-12 col-md-6 mb-4 d-flex justify-content-center">
+            <div class="card-painel">
+                <h3><i class="fa-solid fa-money-bill-1-wave mx-3"></i>Ganhe recomendando produtos!</h3>
             </div>
-    
         </div>
+    
     </div>
+</div>
+
     
     
 

@@ -29,7 +29,7 @@
     
         <div class="logo-container">
             <a href="index.php">
-                <img src="public/IMG/CheckCar_side.png" alt="Logo CheckCar">
+                <img src="../IMG/checkcar_side.png" alt="Logo CheckCar">
             </a>
         </div>
 </div>

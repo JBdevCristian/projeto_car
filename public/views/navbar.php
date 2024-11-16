@@ -1,7 +1,7 @@
 <header class="d-flex justify-content-between align-items-center p-3 bg-dark text-white">
         <div class="logo-container">
             <a href="index.php">
-                <img src="public/IMG/transparente.png" >
+                <img src="../IMG/transparente.png" >
             </a>
         </div>
         <nav class="d-flex align-items-center w-100"> <!-- Mudança aqui -->
