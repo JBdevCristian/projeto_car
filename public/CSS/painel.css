@@ -5,22 +5,6 @@ body {
     margin: 0;
 }
 
-
-
-/*Navbar*/
-
-.logo-container {
-    margin-top: auto; /* Empurra a logo para a parte inferior da sidebar */
-    padding: 10px; /* Adiciona um pouco de espaço em torno da imagem */
-    text-align: center; /* Centraliza a imagem */
-}
-
-.logo-container img {
-    max-width: 30%; /* Garante que a imagem não exceda a largura do contêiner */
-    width: 100px; /* Mantém a proporção da imagem */
-}
-
-
 /* CSS existente */
 .sidebar {
     display: flex;

@@ -18,53 +18,101 @@
     <link rel="stylesheet" href="public/CSS/painel.css">
 </head>
 <body>
-
-    
-    
     <? include("./public/views/sidebar.php"); ?>
 
-    <div class="content collapsed d-flex justify-content-center" id="content"> <!-- Centraliza todo o conteúdo -->
-        <div id="info" class="row text-center"> <!-- Adicionando texto centralizado -->
-    
-        <div class="col-md-12 mb-4">
-            <h2 id="profile">Qual o modelo do veículo?</h2>
-            <form id="searchForm" class="d-flex justify-content-center mt-5">
-                <input type="text" id="veiculoInput" placeholder="Digite modelo" class="form-control me-2" style="width: 600px;">
-                <button type="submit" class="btn btn-success">Pesquisar</button>
-            </form>
-            <div id="resultados" class="mt-4"></div> <!-- Div para exibir os resultados -->
+
+    <div class="content collapsed" id="content">
+    <!-- Centraliza todo o conteúdo -->
+    <div id="info" class="row d-flex justify-content-center align-items-center min-vh-100">
+        <!-- Centraliza o conteúdo verticalmente e horizontalmente -->
+        
+        <div class="col-12 col-md-6">
+        <!-- Card com imagem e nome -->
+        <div class="card-perfil">
+            <img src="" alt="Imagem do usuário" class="card-img-top">
+            <div class="card-body text-center">
+                <h3 class="card-title">Cristian Adagoberto Enes Vianna da Silva</h3>
+                <a href="#" class="card-link">Alterar nome</a>
+            </div>
         </div>
-    
-            <div class="col-md-6 mb-4 d-flex justify-content-center"> <!-- Use mb-4 para espaço entre as colunas -->
-                    <div class="card-painel">
-                        <h1>teste</h1>
-                    </div>
+
+        <!-- Informações da conta -->
+            <div id="info-conta" class="mb-4">
+                <h3>Informações da Conta</h3>
+                <div class="card-perfil">
+                    <p><strong>Nacionalidade</strong></p>
+                    <h5>Brasileiro</h5>
+                    <p><strong>Id da Conta</strong></p>
+                    <h5>(ASDASD46A5S4DAS)</h5>
+                    <p><strong>CPF</strong></p>
+                    <h5>496.476.678-09</h5>
+                    <button class="btn btn-danger w-100">Encerrar Conta</button>
+                </div>
             </div>
-    
-            <div class="col-md-6 mb-4 d-flex justify-content-center"> <!-- Use mb-4 para espaço entre as colunas -->
-                    <div class="card-painel">
-                        <h1>teste</h1>
-                    </div>
-            </div>
-    
-            <div class="col-md-6 mb-4 d-flex justify-content-center"> <!-- Use mb-4 para espaço entre as colunas -->
-                <div class="card-painel">
-                    <h1>teste</h1>
+        </div>
+
+
+        <div class="col-12 col-md-6">
+            <div id="emails" class="mb-4">
+                <div class="d-flex">
+                    <h3>E-mails</h3>
+                    <button class="btn btn-primary mb-3">Adicionar +</button>
+                </div>
+                <div class="email card-perfil mb-2">
+                    <i>(logo email)</i>
+                    <label for="">Principal</label>
+                    <p>jbcristian78@gmail.com</p>
+                    <a href="#">editar</a>
                 </div>
             </div>
 
-            <div class="col-md-6 mb-4 d-flex justify-content-center"> <!-- Use mb-4 para espaço entre as colunas -->
-                <div class="card-painel">
-                    <h1>teste</h1>
+            <div id="telefones" class="mb-4">
+                <div class="d-flex">
+                    <h3>Numeros de telefone</h3>
+                    <button class="btn btn-primary mb-3">Adicionar +</button>
+                </div>
+                <div class="telefone card-perfil mb-2">
+                    <i>(logo telefone)</i>
+                    <label for="">Principal</label>
+                    <p>(11) 94112-5900</p>
+                    <a href="#">editar</a>
                 </div>
             </div>
-    
+
+            <div id="enderecos" class="mb-4">
+                <div class="d-flex">
+                    <h3>Endereços</h3>
+                    <button class="btn btn-primary mb-3">Adicionar +</button>
+                </div>
+                <div class="endereco card-perfil mb-2">
+                    <i>(logo casa)</i>
+                    <label for="">Principal</label>
+                    <p>Rua maria rosa fernandes, Parque Taboão, Taboão da serra SP 06764450</p>
+                    <a href="#">editar</a>
+                </div>
+            </div>
         </div>
+    
     </div>
-    
-    
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+
+    
+    
+<style>
+    .card-perfil {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+   
+</style>
+
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
@@ -79,5 +127,4 @@
             content.classList.toggle('expanded');
         });
     </script>
-</body>
 </html>

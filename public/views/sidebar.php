@@ -4,7 +4,7 @@
             <span class="sidebar-title">Painel de Controle</span>
         </h2>
         <nav class="nav flex-column">
-            <a class="nav-link text-white" href="#profile">
+            <a class="nav-link text-white" href="perfil.php">
                 <i class="fas fa-user"></i>
                 <span class="nav-text">Perfil</span>
             </a>
