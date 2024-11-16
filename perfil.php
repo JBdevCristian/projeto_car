@@ -78,65 +78,6 @@
             content.classList.toggle('collapsed');
             content.classList.toggle('expanded');
         });
-        /* API */
-        /*
-            document.getElementById("searchForm").addEventListener("submit", async function (event) {
-            event.preventDefault(); // Evita o comportamento padrão do formulário
-            const input = document.getElementById("veiculoInput").value.trim();
-
-            if (input === "") {
-                alert("Por favor, digite um modelo de veículo.");
-                return;
-            }
-
-            const resultadosDiv = document.getElementById("resultados");
-            resultadosDiv.innerHTML = "<p>Carregando...</p>";
-
-            try {
-                // Faz a chamada para obter as marcas
-                const marcasResponse = await fetch("https://parallelum.com.br/fipe/api/v1/carros/marcas");
-                const marcas = await marcasResponse.json();
-
-                const resultados = [];
-
-                // Itera sobre cada marca e busca modelos correspondentes ao input
-                for (const marca of marcas) {
-                    const modelosResponse = await fetch(`https://parallelum.com.br/fipe/api/v1/carros/marcas/${marca.codigo}/modelos`);
-                    const modelos = await modelosResponse.json();
-
-                    // Filtra os modelos que incluem o texto digitado no input
-                    const modelosFiltrados = modelos.modelos.filter(modelo =>
-                        modelo.nome.toLowerCase().includes(input.toLowerCase())
-                    );
-
-                    // Adiciona os resultados encontrados ao array
-                    modelosFiltrados.forEach(modelo => {
-                        resultados.push({
-                            marca: marca.nome,
-                            modelo: modelo.nome,
-                            codigo: modelo.codigo,
-                        });
-                    });
-                }
-
-                // Exibe os resultados na div
-                if (resultados.length > 0) {
-                    resultadosDiv.innerHTML = "<h4>Resultados encontrados:</h4>";
-                    resultados.forEach(item => {
-                        const itemHtml = `
-                            <p><strong>Marca:</strong> ${item.marca} | <strong>Modelo:</strong> ${item.modelo} | <strong>Código:</strong> ${item.codigo}</p>
-                        `;
-                        resultadosDiv.innerHTML += itemHtml;
-                    });
-                } else {
-                    resultadosDiv.innerHTML = "<p>Nenhum modelo encontrado.</p>";
-                }
-            } catch (error) {
-                console.error("Erro ao buscar dados:", error);
-                resultadosDiv.innerHTML = "<p>Ocorreu um erro ao buscar os dados. Tente novamente.</p>";
-            }
-        });
-        */
     </script>
 </body>
 </html>
